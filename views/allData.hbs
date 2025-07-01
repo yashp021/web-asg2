@@ -1,0 +1,39 @@
+<h2>{{title}}</h2>
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Year</th>
+      <th>Genre</th>
+      <th>Director</th>
+      <th>Metascore</th>
+      <th>Rating</th>
+      <th>Poster</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{!-- {{#each movies}}
+      <tr>
+        <td><strong>{{Title}}</strong></td>
+        <td>{{Year}}</td>
+        <td>{{Genre}}</td>
+        <td><strong>{{Director}}</strong></td>
+        <td>{{Metascore}}</td>
+        <td>{{imdbRating}}</td>
+        <td>
+          <img src="{{Poster}}" alt="Poster" width="60"/>
+        </td>
+      </tr>
+    {{/each}} --}}
+
+  {{!-- step-10 --}}
+  {{#each movies}}
+    {{> movieRow}}
+  {{/each}}
+
+
+  </tbody>
+</table>
+
+

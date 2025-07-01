@@ -1,0 +1,23 @@
+<h2>{{title}}</h2>
+
+<!-- displaying all movies with rows highlighted with missing metascore -->
+<table border="1" cellpadding="8">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Year</th>
+      <th>Metascore</th>
+      <th>Director</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each movies}}
+      <tr>
+        <td class="{{highlightIfNoMeta Metascore}}">{{Title}}</td>
+        <td class="{{highlightIfNoMeta Metascore}}">{{Year}}</td>
+        <td class="{{highlightIfNoMeta Metascore}}">{{Metascore}}</td>
+        <td class="{{highlightIfNoMeta Metascore}}">{{Director}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

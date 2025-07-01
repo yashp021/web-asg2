@@ -1,0 +1,14 @@
+<h2>Search by Movie ID</h2>
+<form method="get" action="/data/search/id">
+  <input type="number" name="id" placeholder="Enter Movie ID" required />
+  <button type="submit">Search</button>
+</form>
+
+{{#if found}}
+  <h3>{{movie.Title}}</h3>
+  <p>{{movie.Plot}}</p>
+{{/if}}
+
+{{#if notFound}}
+  <p>No movie found with that ID.</p>
+{{/if}}
